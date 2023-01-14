@@ -1,0 +1,6 @@
+
+python3 selection_generator.py $1
+
+seq 0 19 | parallel ./gen_panel   {}
+seq 0 19 | parallel ./run_ahmmmls {}
+

@@ -1,0 +1,1 @@
+nice -n 5 ../ahmm_mls_binary -i 3R.SD.SUBDIVIDED.panel -s SD.3R.SUBDIVIDED.ploidy -m 0.17 430 -l site_file -R 0.03 -c 100 -vc -vo -g > OUT

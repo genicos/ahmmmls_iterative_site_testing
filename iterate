@@ -1,0 +1,43 @@
+order=${1:-0}
+
+if (($order < 12))
+then
+    python3 make_site_files.py $order
+else
+    exit
+fi
+
+cd 3r_simulation
+./run_simulations $order &
+wait
+
+threshold=$(python3 95thresh.py)
+
+cd ../3r_real
+./run &
+wait
+
+alt_lnl=$(python3 get_lnl.py)
+
+cd ..
+
+best_lnl=$(cat best_lnl)
+
+
+echo $threshold
+echo $best_lnl
+echo $alt_lnl
+
+accepted=$(python3 eval_alt_model.py $threshold $best_lnl $alt_lnl)
+echo $accepted
+if [[ $accepted == "True" ]]
+then
+    echo "Accepted"
+    cp 3r_real/OUT best_model
+    echo $alt_lnl > best_lnl
+    cp 3r_real/site_file best_site_file
+else
+    echo "Rejected"
+fi
+
+./iterate $(($order + 1))

@@ -1,0 +1,9 @@
+index=$1
+
+rm -f selam_outputs/selam_output${index}
+nice -n 5 ./SELAM --seed $RANDOM{} -d demography -o output_files/output${index} -c 2 0.427 0 -s selection
+rm -f panels/panel${index}
+nice -n 5 perl simulate_reads.pl 2 1 selam_outputs/selam_output${index} < drosophila.0.4.txt > panels/panel${index}
+
+cut -f 1-$((88+7)) panels/panel${index} > panels/temp${index}
+mv panels/temp${index} panels/panel${index} 
