@@ -1,6 +1,6 @@
 order=${1:-0}
 
-echo "Testing site"+$order >> log
+echo "Testing site"$order >> log
 
 
 if (($order < 12))
@@ -19,36 +19,37 @@ cd 3r_simulation
 ./run_simulations $order &
 wait
 
-echo "completed" >> log
 
 threshold=$(python3 95thresh.py)
+
+cd ..
+echo "completed" >> log
 
 
 cat 3r_real/site_file >> log
 echo "" >> log
 cat "Running on 3r" >> log
 
-cd ../3r_real
+cd 3r_real
 ./run &
 wait
-
-echo "completed" >> log
 
 alt_lnl=$(python3 get_lnl.py)
 
 cd ..
+echo "completed" >> log
 
 best_lnl=$(cat best_lnl)
 
 echo "Results:"
-echo "Threshold"+$threshold
-echo "best lnl"+$best_lnl
-echo "alt  lnl"+$alt_lnl
+echo "Threshold"$threshold
+echo "best lnl"$best_lnl
+echo "alt  lnl"$alt_lnl
 
 echo "Results:" >> log
-echo "Threshold"+$threshold >> log
-echo "best lnl"+$best_lnl >> log
-echo "alt  lnl"+$alt_lnl >> log
+echo "Threshold"$threshold >> log
+echo "best lnl"$best_lnl >> log
+echo "alt  lnl"$alt_lnl >> log
 
 accepted=$(python3 eval_alt_model.py $threshold $best_lnl $alt_lnl)
 echo $accepted
