@@ -36,9 +36,9 @@ for f in OUTfiles:
         
         elif line[0] == 'f' and not first:
             
+            lnl = float(line.split()[-1])
+
             alt_lnl.append(lnl)
-            
-            info[ident][2].append(lnl)
             
      
 
