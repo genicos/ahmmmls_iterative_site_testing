@@ -1,5 +1,8 @@
 order=${1:-0}
 
+echo "Testing site"+$order >> log
+
+
 if (($order < 12))
 then
     python3 make_site_files.py $order
@@ -7,15 +10,29 @@ else
     exit
 fi
 
+
+cat 3r_simulation/site_file >> log
+echo "" >> log
+echo "Running null simulations" >> log
+
 cd 3r_simulation
 ./run_simulations $order &
 wait
 
+echo "completed" >> log
+
 threshold=$(python3 95thresh.py)
+
+
+cat 3r_real/site_file >> log
+echo "" >> log
+cat "Running on 3r" >> log
 
 cd ../3r_real
 ./run &
 wait
+
+echo "completed" >> log
 
 alt_lnl=$(python3 get_lnl.py)
 
@@ -23,21 +40,34 @@ cd ..
 
 best_lnl=$(cat best_lnl)
 
+echo "Results:"
+echo "Threshold"+$threshold
+echo "best lnl"+$best_lnl
+echo "alt  lnl"+$alt_lnl
 
-echo $threshold
-echo $best_lnl
-echo $alt_lnl
+echo "Results:" >> log
+echo "Threshold"+$threshold >> log
+echo "best lnl"+$best_lnl >> log
+echo "alt  lnl"+$alt_lnl >> log
 
 accepted=$(python3 eval_alt_model.py $threshold $best_lnl $alt_lnl)
 echo $accepted
 if [[ $accepted == "True" ]]
 then
     echo "Accepted"
+    echo "Accepted" >> log
     cp 3r_real/OUT best_model
     echo $alt_lnl > best_lnl
     cp 3r_real/site_file best_site_file
 else
     echo "Rejected"
+    echo "Rejected" >> log
 fi
+
+
+echo "Best model so far" >> log
+cat best_model >> log
+echo "" >> log
+
 
 ./iterate $(($order + 1))
