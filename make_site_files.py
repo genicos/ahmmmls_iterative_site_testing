@@ -23,14 +23,13 @@ bound_radius = 0.005
 
 
 best_site_file = open("best_site_file","r").read()[:-1]
-addendum = " tma0 " + str(sites_to_test[site_index]) + " " + str(sites_to_test[site_index] - bound_radius) + " " + str(sites_to_test[site_index] + bound_radius)
+addendum = " l (" + str(sites_to_test[site_index]) + ") " + str(sites_to_test[site_index] - bound_radius) + " " + str(sites_to_test[site_index] + bound_radius) + " h 0.5 s ()+ "
 
 
 sim_sitefile = open("3r_simulation/site_file","w")
 
 sim_sitefile.write(best_site_file + addendum + "\n")
-if (site_index > 0):
-    sim_sitefile.write(best_site_file)
+sim_sitefile.write(best_site_file)
 
 real_sitefile = open("3r_real/site_file","w")
 real_sitefile.write(best_site_file + addendum)

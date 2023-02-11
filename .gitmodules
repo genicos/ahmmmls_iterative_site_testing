@@ -1,0 +1,6 @@
+[submodule "ahmm_mls"]
+	path = ahmm_mls
+	url = git@github.com:genicos/ahmm_mls.git
+[submodule "SELAM"]
+	path = SELAM
+	url = git@github.com:russcd/SELAM.git

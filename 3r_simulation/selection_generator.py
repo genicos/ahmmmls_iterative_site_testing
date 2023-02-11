@@ -4,15 +4,13 @@ from math import floor
 
 initial_model = sys.argv[1] == '0' #null model simulation
 
-time = 430
-prop = 0.17
+time = 466
+prop = 0.138252941724984
 sites = []
 
 if not initial_model:
     out_file = open("../3r_real/OUT").readlines()
-    time = float(out_file[4].split()[-1])
-    prop = float(out_file[5].split()[-1])
-    i = 6
+    i = 4
     while(out_file[i][0] == 's'):
         sites.append(float(out_file[i].split()[1]))
         sites.append(1 - float(out_file[i].split()[2].split(',')[0]))

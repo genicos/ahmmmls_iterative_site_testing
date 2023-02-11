@@ -1,0 +1,6 @@
+cd ahmm_mls/src
+make
+cp ahmm_mls ../../ahmm_mls_binary
+cd ../../SELAM/src
+make
+cp SELAM ../../3r_simulation/
