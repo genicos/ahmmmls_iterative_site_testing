@@ -3,7 +3,7 @@ order=${1:-0}
 echo "Testing site"$order >> log
 
 
-if (($order < 12))
+if (($order < $(wc -l < sites_to_test)))
 then
     python3 make_site_files.py $order
 else
