@@ -9,11 +9,11 @@ prop = 0.138252941724984
 sites = []
 
 if not initial_model:
-    out_file = open("../3r_real/OUT").readlines()
-    i = 4
+    out_file = open("../best_model").readlines()
+    i = 1
     while(out_file[i][0] == 's'):
         sites.append(float(out_file[i].split()[1]))
-        sites.append(1 - float(out_file[i].split()[2].split(',')[0]))
+        sites.append(float(out_file[i].split(',')[-1]) - 1)
         i += 1
 
 
