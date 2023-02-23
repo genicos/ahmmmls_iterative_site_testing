@@ -1,1 +1,1 @@
-nice -n 5 ../ahmm_mls_binary -i 3R.SD.SUBDIVIDED.panel -s SD.3R.SUBDIVIDED.ploidy -m 0.138252941724984 466 -l fine_config -R 0.05 -c 80 -vc -vo -g > OUT_fine
+nice -n 5 ../ahmm_mls_binary -i 3R.SD.SUBDIVIDED.panel -s SD.3R.SUBDIVIDED.ploidy -m 0.138252941724984 466 -l fine_config -R 0.05 -c 60 -vc -vo -g > OUT_fine

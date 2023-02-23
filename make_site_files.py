@@ -9,8 +9,8 @@ bound_radius = 0.005
 
 
 best_site_file = open("best_site_file","r").read()[:-1]
-addendum = " l (" + str(site_to_test) + ") " + str(site_to_test - bound_radius) + " " + str(site_to_test + bound_radius) + " h 0.5 s ()+ "
-
+#addendum = " l (" + str(site_to_test) + ") " + str(site_to_test - bound_radius) + " " + str(site_to_test + bound_radius) + " h 0.5 s ()+ "
+addendum = " l " + str(site_to_test) + " h 0.5 s ()+ "
 
 sim_sitefile = open("3r_simulation/site_file","w")
 

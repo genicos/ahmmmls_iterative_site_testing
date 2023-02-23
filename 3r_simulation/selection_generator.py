@@ -13,7 +13,7 @@ if not initial_model:
     i = 1
     while(out_file[i][0] == 's'):
         sites.append(float(out_file[i].split()[1]))
-        sites.append(float(out_file[i].split(',')[-1]) - 1)
+        sites.append((1 - float(out_file[i].split(',')[-1])) / (1 - float(out_file[i].split(',')[-1])/2 ))
         i += 1
 
 
@@ -28,8 +28,8 @@ for i in range(len(sites)//2):
     selection.write("S\tA\t0\t")
 
     a = 1
-    b = 1 + sites[i*2 + 1]/2
-    c = 1 + sites[i*2 + 1]
+    b = 1 - sites[i*2 + 1]/2
+    c = 1 - sites[i*2 + 1]
 
     site = str(sites[i*2])
             

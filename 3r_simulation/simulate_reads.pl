@@ -29,7 +29,7 @@ while (<IN>) {
 	}
 	chomp $_ ; 
 	my @split = split (/\t/, $_) ; 
-	push @{ $position{$split[3]*2+$split[5]-2} }, int($split[7]*$length/0.427) ;
+	push @{ $position{$split[3]*2+$split[5]-2} }, int($split[7]*$length/0.549) ;
 	push @{ $ancestry{$split[3]*2+$split[5]-2} }, $split[6] ; 
 }
 close IN ; 
