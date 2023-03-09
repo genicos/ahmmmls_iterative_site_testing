@@ -4,8 +4,11 @@ from math import floor
 
 initial_model = sys.argv[1] == '0' #null model simulation
 
-time = 466
-prop = 0.138252941724984
+demographics_file = open("../chrom_and_demo/demographics").readlines()
+
+
+prop = str(float(demographics_file[0]))
+time = str(float(demographics_file[1]))
 sites = []
 
 if not initial_model:

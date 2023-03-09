@@ -1,3 +1,7 @@
+mkdir selam_outputs
+mkdir outputs
+mkdir output_files
+mkdir panels
 
 python3 selection_generator.py $1
 

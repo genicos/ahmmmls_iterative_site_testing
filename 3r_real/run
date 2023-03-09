@@ -1,1 +1,1 @@
-nice -n 19 ../ahmm_mls_binary -i 3R.SD.SUBDIVIDED.panel -s SD.3R.SUBDIVIDED.ploidy -m 0.138252941724984 466 -l site_file -R 0.03 -c 60 -vc -vo -g > OUT
+nice -n 19 ../ahmm_mls_binary -i ../chrom_and_demo/panel -s ../chrom_and_demo/sample -l site_file -R 0.03 -c 60 -vc -vo -g > OUT
