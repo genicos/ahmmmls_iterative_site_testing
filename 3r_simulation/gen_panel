@@ -1,11 +1,11 @@
 index=$1
 
-python3 scale_drosophila.py 0.549
+python3 scale_drosophila.py $(python3 get_chrom_size.py)
 
 rm -f selam_outputs/selam_output${index}
-nice -n 5 ./SELAM --seed $RANDOM{} -d demography -o output_files/output${index} -c 2 0.549 0 -s selection
+nice -n 5 ./SELAM --seed $RANDOM{} -d demography -o output_files/output${index} -c 2 $(python3 get_chrom_size.py) 0 -s selection
 rm -f panels/panel${index}
-nice -n 5 perl simulate_reads.pl 2 1 selam_outputs/selam_output${index} < drosophila_scaled > panels/panel${index}
+nice -n 5 perl simulate_reads.pl 2 1 selam_outputs/selam_output${index} $(python3 get_chrom_size.py) < drosophila_scaled > panels/panel${index}
 
 cut -f 1-$((88+7)) panels/panel${index} > panels/temp${index}
 mv panels/temp${index} panels/panel${index} 

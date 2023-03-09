@@ -9,6 +9,8 @@ use List::Util ;
 my $ploidy = $ARGV[0] ;
 ### set mean per site depth 
 my $depth = $ARGV[1] ; 
+### set chrom length in morgans
+my $size = $ARGV[3]
 ### files are selam output (uncompressed)
 ### macs2hmm output is genotypes
 
