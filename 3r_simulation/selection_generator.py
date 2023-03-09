@@ -7,8 +7,8 @@ initial_model = sys.argv[1] == '0' #null model simulation
 demographics_file = open("../chrom_and_demo/demographics").readlines()
 
 
-prop = str(float(demographics_file[0]))
-time = str(float(demographics_file[1]))
+prop = float(demographics_file[0])
+time = float(demographics_file[1])
 sites = []
 
 if not initial_model:

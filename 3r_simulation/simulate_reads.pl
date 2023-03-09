@@ -10,7 +10,7 @@ my $ploidy = $ARGV[0] ;
 ### set mean per site depth 
 my $depth = $ARGV[1] ; 
 ### set chrom length in morgans
-my $size = $ARGV[3]
+my $size = $ARGV[3] ;
 ### files are selam output (uncompressed)
 ### macs2hmm output is genotypes
 
@@ -31,7 +31,7 @@ while (<IN>) {
 	}
 	chomp $_ ; 
 	my @split = split (/\t/, $_) ; 
-	push @{ $position{$split[3]*2+$split[5]-2} }, int($split[7]*$length/0.549) ;
+	push @{ $position{$split[3]*2+$split[5]-2} }, int($split[7]*$length/$size) ;
 	push @{ $ancestry{$split[3]*2+$split[5]-2} }, $split[6] ; 
 }
 close IN ; 
