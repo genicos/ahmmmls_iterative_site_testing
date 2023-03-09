@@ -1,6 +1,8 @@
 import sys
 
 demo = open("chrom_and_demo/demographics").readlines()
+m = str(float(demo[0]))
+t = str(int(demo[1]))
 
 best_lnl = open("best_lnl","w")
 best_lnl.write("-999999999999")
