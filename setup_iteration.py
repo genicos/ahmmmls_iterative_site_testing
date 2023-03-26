@@ -10,4 +10,4 @@ best_lnl.write("-999999999999")
 best_model = open("best_model", "w")
 
 best_model = open("best_model_file", "w")
-best_model.write("0 test n "+m+" "+t+" ")
+best_model.write("1 test n "+m+" "+t+" ")
