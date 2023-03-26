@@ -5,13 +5,13 @@ echo "Testing site"$order >> log
 
 if (($order < $(wc -l < sites_to_test)))
 then
-    python3 make_site_files.py $order
+    python3 make_model_files.py $order
 else
     exit
 fi
 
 
-cat 3r_simulation/site_file >> log
+cat 3r_simulation/model_file >> log
 echo "" >> log
 echo "Running null simulations" >> log
 
@@ -26,7 +26,7 @@ cd ..
 echo "completed" >> log
 
 
-cat 3r_real/site_file >> log
+cat 3r_real/model_file >> log
 echo "" >> log
 cat "Running on 3r" >> log
 
@@ -59,7 +59,7 @@ then
     echo "Accepted" >> log
     cp 3r_real/OUT best_model
     echo $alt_lnl > best_lnl
-    cp 3r_real/site_file best_site_file
+    cp 3r_real/model_file best_model_file
 else
     echo "Rejected"
     echo "Rejected" >> log

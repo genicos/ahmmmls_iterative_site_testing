@@ -1,1 +1,1 @@
-nice -n 19 ../ahmm_mls_binary -i panels/panel$1 -s sample -m 0.138252941724984 466 -l site_file -c 3 -vo -vc -g > outputs/OUT$1
+nice -n 19 ../ahmm_mls_binary -i panels/panel$1 -s sample -m model_file -c 1 -R 0.03 -vo -vc -g > outputs/OUT$1
