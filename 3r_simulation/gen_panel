@@ -1,7 +1,5 @@
 index=$1
 
-python3 scale_drosophila.py $(python3 get_chrom_size.py)
-
 rm -f selam_outputs/selam_output${index}
 nice -n 5 ./SELAM --seed $RANDOM{} -d demography -o output_files/output${index} -c 2 $(python3 get_chrom_size.py) 0 -s selection
 rm -f panels/panel${index}

@@ -1,7 +1,9 @@
-mkdir selam_outputs
+kdir selam_outputs
 mkdir outputs
 mkdir output_files
 mkdir panels
+
+python3 scale_drosophila.py $(python3 get_chrom_size.py)
 
 python3 selection_generator.py $1
 
