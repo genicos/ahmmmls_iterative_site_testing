@@ -1,0 +1,14 @@
+In this directory are the scripts and commands used to perform the final fine tuning of
+our 3R multi-locus model, and calculate the expected ancestries.
+
+   First we ran the command run_fine_scale0
+This refits the best model from the iterative procedure, but it allows the position of the sites
+to move around up to half a centimorgan
+
+   Then we ran the command run_fine_scale1
+This fits the model found by run_fine_scale0 but with the sites held back in place
+
+   Finally we ran run_local_ancestry
+Here, we took the model found by run_fine_scale1 and split it into two halves of the chromosome.
+For each half, we calculated the expected local ancestry from the model, and from the samples.
+
