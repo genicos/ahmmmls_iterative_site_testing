@@ -4,3 +4,6 @@
 [submodule "SELAM"]
 	path = SELAM
 	url = git@github.com:russcd/SELAM.git
+[submodule "Ancestry_HMM-S"]
+	path = Ancestry_HMM-S
+	url = https://github.com/jesvedberg/Ancestry_HMM-S/

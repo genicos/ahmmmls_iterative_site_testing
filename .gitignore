@@ -4,6 +4,8 @@ ahmm_mls_binary
 3r_simulation/outputs
 3r_simulation/output_files
 3r_simulation/panels
+3r_simulation/ahmms_outputs
+3r_simulation/ahmmmls_outputs
 3r_simulation/selection
 3r_simulation/drosophila_scaled
 3r_simulation/demography
