@@ -1,8 +1,9 @@
-kdir selam_outputs
+mkdir selam_outputs
 mkdir outputs
 mkdir output_files
 mkdir panels
-
+mkdir ahmms_outputs
+mkdir ahmmmls_outputs
 
 # Here we scale up the simulated genotype in drosophila.0.4.txt
 #  to be the same size in morgans as the chromosome 3R
