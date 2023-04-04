@@ -1,1 +1,1 @@
-nice -n 19 ../ahmm_mls_binary -i panels/panel$1 -s sample -m model_file -c 1 -R 0.03 -vo -vc -g > outputs/OUT$1
+nice -n 19 ../ahmm_mls_binary -i panels/panel$1 -s sample -m config_files/config_$1 -c 1 -R 0.03 -vo -vc -g > outputs/OUT$1

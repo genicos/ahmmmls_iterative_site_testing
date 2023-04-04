@@ -4,16 +4,25 @@ mkdir output_files
 mkdir panels
 mkdir ahmms_outputs
 mkdir ahmmmls_outputs
+mkdir config_files
 
 # Here we scale up the simulated genotype in drosophila.0.4.txt
 #  to be the same size in morgans as the chromosome 3R
 python3 scale_drosophila.py $(python3 get_chrom_size.py)
+
+exit
 
 # Generate a selection file for the current null model
 python3 selection_generator.py $1
 
 # Generate the panels using SELAM
 seq 0 19 | parallel ./gen_panel   {}
+
+# Run ahmms on panels
+seq 0 19 | parallel --lb ./run_ahmms {}
+
+# Generate config files
+seq 0 19 | parallel python3 config_generator.py {} $1
 
 # Fit both null and alternative models to generated panels
 seq 0 19 | parallel --lb ./run_ahmmmls {}
