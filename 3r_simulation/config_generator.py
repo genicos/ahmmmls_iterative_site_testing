@@ -89,13 +89,13 @@ def Sort_Tuple(tup):
 peaks = Sort_Tuple(peaks)
 peaks.reverse()
 
-
+print(peaks)
 
 best_model_file = open("../best_model_file","r").read()[:-1]
 
 
 config = open("config_files/config_"+str(index), "w")
 
-config.write(best_model_file + " " + str(peaks[int(site_testing)][0])+" h 0.5 s ()+\n")
+config.write(best_model_file + " l " + str(peaks[int(site_testing)][0])+" h 0.5 s ()+\n")
 config.write(best_model_file + "\n")
 config.close()

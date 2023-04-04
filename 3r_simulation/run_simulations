@@ -10,7 +10,6 @@ mkdir config_files
 #  to be the same size in morgans as the chromosome 3R
 python3 scale_drosophila.py $(python3 get_chrom_size.py)
 
-exit
 
 # Generate a selection file for the current null model
 python3 selection_generator.py $1
