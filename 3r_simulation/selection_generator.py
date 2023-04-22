@@ -16,7 +16,7 @@ if not initial_model:
     i = 1
     while(out_file[i][0] == 's'):
         sites.append(float(out_file[i].split()[1]))
-        sites.append((1 - float(out_file[i].split(',')[-1])) / (1 - float(out_file[i].split(',')[-1])/2 ))
+        sites.append(1 - float(out_file[i].split(',')[-1]))
         i += 1
 
 

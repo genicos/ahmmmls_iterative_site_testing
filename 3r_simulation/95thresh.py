@@ -26,7 +26,7 @@ for f in OUTfiles:
 
     for i in range(len(OUT)):
         line = OUT[i]
-        if line[0] == 'f' and first:
+        if line[0] == 'l' and first:
             
             lnl = float(line.split()[-1])
 
@@ -34,7 +34,7 @@ for f in OUTfiles:
 
             first = False
         
-        elif line[0] == 'f' and not first:
+        elif line[0] == 'l' and not first:
             
             lnl = float(line.split()[-1])
 
