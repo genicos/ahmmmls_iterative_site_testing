@@ -1,1 +1,0 @@
-nice -n 19 ../ahmm_mls_binary -i ../chrom_and_demo/panel -s ../chrom_and_demo/sample -m la_neut_config -R 0.05 -c 60 -vc -vo -g -t2 0.1 > OUT_neut

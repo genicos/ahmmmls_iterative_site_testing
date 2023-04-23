@@ -5,6 +5,7 @@ our 3R multi-locus model, and calculate the expected ancestries.
 This refits the best model from the iterative procedure, but it allows the position of the sites
 to move around up to half a centimorgan
 
+
    Then we ran the command run_fine_scale1
 This fits the model found by run_fine_scale0 but with the sites held back in place
 
