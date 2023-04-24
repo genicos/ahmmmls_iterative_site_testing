@@ -1,9 +1,14 @@
+#!/bin/bash
 index=$1
 
+#Run selam to simulate admixed population
 rm -f selam_outputs/selam_output${index}
 nice -n 5 ./SELAM --seed $RANDOM{} -d demography -o output_files/output${index} -c 2 $(python3 get_chrom_size.py) 0 -s selection
+
+#Simulate the sampling of reads from admixed population
 rm -f panels/panel${index}
 nice -n 5 perl simulate_reads.pl 2 1 selam_outputs/selam_output${index} $(python3 get_chrom_size.py) < drosophila_scaled > panels/panel${index}
 
+#Cut the panel file to have the same number of samples as our 3R panel file
 cut -f 1-$((88+7)) panels/panel${index} > panels/temp${index}
 mv panels/temp${index} panels/panel${index} 

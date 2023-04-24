@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir selam_outputs
 mkdir outputs
 mkdir output_files
@@ -17,10 +18,11 @@ python3 selection_generator.py $1
 # Generate the panels using SELAM
 seq 0 19 | parallel ./gen_panel   {}
 
-# Run ahmms on panels
+# Run ahmms on panels, to find the peaks
 seq 0 19 | parallel --lb ./run_ahmms {}
 
-# Generate config files
+# Generate config files (model files), the alternative model 
+#  includes the next largest peak found by ahmms
 seq 0 19 | parallel python3 config_generator.py {} $1
 
 # Fit both null and alternative models to generated panels

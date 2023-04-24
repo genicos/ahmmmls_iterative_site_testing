@@ -1,8 +1,9 @@
+#!/bin/bash
 order=${1:-0}
 
 echo "Testing site"$order >> log
 
-
+# check if its past the last site
 if (($order < $(wc -l < chrom_and_demo/sites_to_test)))
 then
     python3 make_model_files.py $order
@@ -15,11 +16,12 @@ cat 3r_simulation/model_file >> log
 echo "" >> log
 echo "Running null simulations" >> log
 
+# Run simulations of null model, and fit null and alt model on them
 cd 3r_simulation
 ./run_simulations $order &
 wait
 
-
+# Get 95 percentile threshold of lnl distribution from null model simulations
 threshold=$(python3 95thresh.py)
 
 cd ..
@@ -30,6 +32,7 @@ cat 3r_real/model_file >> log
 echo "" >> log
 cat "Running on 3r" >> log
 
+# Fit alt model on 3R samples
 cd 3r_real
 ./run &
 wait
@@ -51,14 +54,17 @@ echo "Threshold"$threshold >> log
 echo "best lnl"$best_lnl >> log
 echo "alt  lnl"$alt_lnl >> log
 
+#Compare alt and null model lnl on 3R samples with 95 percentile cut off
 accepted=$(python3 eval_alt_model.py $threshold $best_lnl $alt_lnl)
 echo $accepted
 if [[ $accepted == "True" ]]
 then
     echo "Accepted"
     echo "Accepted" >> log
+    #Update best model to include new site
     cp 3r_real/OUT best_model
     echo $alt_lnl > best_lnl
+    #update best model file to include new site
     cp 3r_real/model_file best_model_file
 else
     echo "Rejected"
@@ -70,5 +76,5 @@ echo "Best model so far" >> log
 cat best_model >> log
 echo "" >> log
 
-
+# Test next site
 ./iterate $(($order + 1))

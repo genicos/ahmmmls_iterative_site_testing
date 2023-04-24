@@ -11,6 +11,7 @@ prop = float(demographics_file[0])
 time = float(demographics_file[1])
 sites = []
 
+# Grabbing the current best model, which will act as our null model
 if not initial_model:
     out_file = open("../best_model").readlines()
     i = 1
@@ -23,7 +24,7 @@ if not initial_model:
 
 
 
-# generate selection file
+# generate selection file, we are simulating the null model 
 
 selection = open("selection", "w")
 

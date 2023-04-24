@@ -1,0 +1,3 @@
+Here we simulate the null models, and fit both the null and alternative model.
+
+The script ./run_simulations is called, and it calls all other scripts in this directory.

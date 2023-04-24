@@ -23,4 +23,5 @@ for i in range(len(bp_convertion_file)):
     
     bp_convertion_file[i] = "\t".join(columns) + "\n"
 
+#Create a new convertion file from base pair coordinates to morgans
 open("bp_morgan_scaled", "w").writelines(bp_convertion_file)

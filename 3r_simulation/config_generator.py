@@ -1,6 +1,6 @@
 import sys
 
-#parameters
+#parameters for peak finding
 site_cutoff = 7
 lnl_cuttoff = 0
 
@@ -21,6 +21,7 @@ morg_coords = []
 lnl_ratio = []
 
 
+# Grab morgan location of sites in ahmms output, as well as the lnl ratios
 i = 0
 j = 0
 for line in ahmms_out:
@@ -40,7 +41,9 @@ sites_loc_morgan = []
 sites_lnl = []
 
 
-
+# Find peaks in lnl ratio across the sites
+# A peak is defined as a site with an lnl ratio that is larger than
+#   that of 7 sites around it, with an lnl ratio of at least 0
 for i in range(len(morg_coords)):
     peak = True
 
@@ -96,6 +99,7 @@ best_model_file = open("../best_model_file","r").read()[:-1]
 
 config = open("config_files/config_"+str(index), "w")
 
+# If we have n sites in our null model, our alt model will include the n-th largest peak
 config.write(best_model_file + " l " + str(peaks[int(site_testing)][0])+" h 0.5 s ()+\n")
 config.write(best_model_file + "\n")
 config.close()
