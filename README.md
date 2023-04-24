@@ -29,3 +29,9 @@ This directory is where we simulate the null models
 
 # /3r_real
 This directory is where we apply the models to the sampled data
+
+# /3r_post_iteration_analysis
+After the iteration process picks a set of sites, we fine tune their location and selection coefficients. 
+
+
+
