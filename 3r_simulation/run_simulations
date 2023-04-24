@@ -4,7 +4,6 @@ mkdir outputs
 mkdir output_files
 mkdir panels
 mkdir ahmms_outputs
-mkdir ahmmmls_outputs
 mkdir config_files
 
 # Here we scale up the simulated genotype in drosophila.0.4.txt
