@@ -42,10 +42,10 @@ Generates the panel files by simulating the admixed population with selection an
 ### get_chrom_size.py
 Gets size of chromosome 3R in morgans
 
-### run_ahmmmmls
+### run_ahmmmls
 Runs Ahmm-mls on panel files.
 
-### run_ahmmms
+### run_ahmms
 Runs Ahmm-s on panel files.
 
 ### run_simulations
@@ -60,7 +60,7 @@ Scales recombinant distance between sampled sites in drosophila.0.4.txt and crea
 ### selection_generator.py
 Creates selection file, demography file, and output files for SELAM.
 
-### simulate_read.pl
+### simulate_reads.pl
 Simulates the extraction of reads from the simulated population, creating a panel file.
 
 ### SELAM (generated file)
