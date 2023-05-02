@@ -66,7 +66,7 @@ Makes new model files for simulations and 3R analysis.
 ### eval_alt_model.py
 Compares two likelihood ratios with a 95% cutoff ratio.
 
-### log_after_iteration
+### final_log
 Recorded log of iteration procedure performed for the paper "Linkage among selected sites impacts inference of natural selection in admixed populations."
 
 ### log (generated file)
