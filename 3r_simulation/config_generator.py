@@ -99,7 +99,9 @@ best_model_file = open("../best_model_file","r").read()[:-1]
 
 config = open("config_files/config_"+str(index), "w")
 
-# If we have n sites in our null model, our alt model will include the n-th largest peak
-config.write(best_model_file + " l " + str(peaks[int(site_testing)][0])+" h 0.5 s ()+\n")
+# If we are testing the nth peak on the real data, our alt model will include the n-th largest peak
+# If there arent enough peaks, test the last peak
+peak_tested = min(int(site_testing), len(peaks) - 1)
+config.write(best_model_file + " l " + str(peaks[peak_tested][0])+" h 0.5 s ()+\n")
 config.write(best_model_file + "\n")
 config.close()
