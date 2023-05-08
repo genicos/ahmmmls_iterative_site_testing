@@ -29,10 +29,10 @@ This is the source code to build Ancestry-HMM Selection, which we use to find th
 ### /chrom_and_demo
 Here is the information specific to the chromosome arm 3R in the drosophila population we are studying.
 
-in chrom_and_demo/demographics, first line is admixture fraction, second line is time (in generations) since admixture.
-chrom_and_demo/panel is the aggregate of reads from this population on chromosome arm 3R, the input file.
-chrom_and_demo/sample is the ploidy of the samples from the population, the sample file.
-in chrom_and_demo/sites_to_test, each line is a candidate selected position, expressed in morgans.
+in chrom_and_demo/demographics, the first line is admixture fraction, second line is time (in generations) since admixture.  
+chrom_and_demo/panel is the aggregate of reads from this population on chromosome arm 3R, the input file.  
+chrom_and_demo/sample is the ploidy of the samples from the population, the sample file.  
+in chrom_and_demo/sites_to_test, each line is a candidate selected position, expressed in morgans.  
 
 ### /3r_simulation
 This directory is where we simulate the null models
@@ -49,7 +49,7 @@ After the iteration process picks a set of sites, we fine tune their location an
 ## Overview of files in this directory
 
 ### make_and_move
-Makes binaries from source code from submodules.
+Makes binaries from source code from submodules. Follow the instructions in each Makefile if the build fails.
 
 ### start_iteration
 Kick starts the iteration method procedure.
@@ -67,7 +67,7 @@ Makes new model files for simulations and 3R analysis.
 Compares two likelihood ratios with a 95% cutoff ratio.
 
 ### final_log
-Recorded log of iteration procedure performed for the paper "Linkage among selected sites impacts inference of natural selection in admixed populations."
+Recorded log of iteration procedure performed for the paper "Interference caused by multi-locus selection in admixed populations"
 
 ### log (generated file)
 Information from the iteration procedure is recorded here
