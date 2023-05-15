@@ -67,7 +67,7 @@ Makes new model files for simulations and 3R analysis.
 Compares two likelihood ratios with a 95% cutoff ratio.
 
 ### final_log
-Recorded log of iteration procedure performed for the paper "Interference caused by multi-locus selection in admixed populations"
+Recorded log of iteration procedure performed for the paper "Inferring multi-locus selection in admixed populations"
 
 ### log (generated file)
 Information from the iteration procedure is recorded here
