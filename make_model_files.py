@@ -13,7 +13,7 @@ best_model_file = open("best_model_file","r").read()[:-1]
 addendum = " l " + str(site_to_test) + " h 0.5 s ()+ "
 
 
-#Test alternative model on 3r samples
-real_modelfile = open("3r_real/model_file","w")
+#Test alternative model on passer samples
+real_modelfile = open("run_real/model_file","w")
 real_modelfile.write(best_model_file + addendum)
 

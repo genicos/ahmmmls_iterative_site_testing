@@ -1,0 +1,10 @@
+#!/bin/bash
+index=$1
+
+#Run selam to simulate admixed population
+rm -f selam_outputs/selam_output${index}
+nice -n 19 ./SELAM --seed $RANDOM{} -d demography -o output_files/output${index} -c 2 2.545 0 -s selection
+
+#Simulate the sampling of reads from admixed population
+rm -f panels/panel${index}
+python3 make_panel.py passer_1_template selam_outputs/selam_output${index} > panels/panel${index}

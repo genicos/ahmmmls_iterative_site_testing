@@ -1,1 +1,0 @@
-nice -n 19 ../ahmm_mls_binary -i ../chrom_and_demo/panel -s ../chrom_and_demo/sample -m model_file -R 0.03 -c 80 -vo -g -f -t2 0.1 > OUT

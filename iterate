@@ -16,7 +16,7 @@ echo "" >> log
 echo "Running null simulations" >> log
 
 # Run simulations of null model, and fit null and alt model on them
-cd 3r_simulation
+cd run_simulation
 ./run_simulations $order &
 wait
 
@@ -27,12 +27,12 @@ cd ..
 echo "completed" >> log
 
 
-cat 3r_real/model_file >> log
+cat run_real/model_file >> log
 echo "" >> log
-cat "Running on 3r" >> log
+cat "Running on chrom 1" >> log
 
-# Fit alt model on 3R samples
-cd 3r_real
+# Fit alt model on passer samples
+cd run_real
 ./run &
 wait
 
@@ -53,7 +53,7 @@ echo "Threshold"$threshold >> log
 echo "best lnl"$best_lnl >> log
 echo "alt  lnl"$alt_lnl >> log
 
-#Compare alt and null model lnl on 3R samples with 95 percentile cut off
+#Compare alt and null model lnl on passer samples with 95 percentile cut off
 accepted=$(python3 eval_alt_model.py $threshold $best_lnl $alt_lnl)
 echo $accepted
 if [[ $accepted == "True" ]]
@@ -61,10 +61,10 @@ then
     echo "Accepted"
     echo "Accepted" >> log
     #Update best model to include new site
-    cp 3r_real/OUT best_model
+    cp run_real/OUT best_model
     echo $alt_lnl > best_lnl
     #update best model file to include new site
-    cp 3r_real/model_file best_model_file
+    cp run_real/model_file best_model_file
 else
     echo "Rejected"
     echo "Rejected" >> log

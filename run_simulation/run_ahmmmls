@@ -1,0 +1,2 @@
+#!/bin/bash
+nice -n 19 ../ahmm_mls_binary -i panels/panel$1 -s sample -m config_files/config_$1 -c 3 -R 0.15 -vo -g -f -t2 0.1 > outputs/OUT$1

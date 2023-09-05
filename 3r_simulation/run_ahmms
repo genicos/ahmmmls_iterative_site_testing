@@ -1,5 +1,0 @@
-#!/bin/bash
-
-index=$1
-
-./ahmm-s -i panels/panel${index} -s sample -p 0 10000 0.861747058275016 -p 1 466 0.138252941724984 --ne 10000 --window p 10 --traj 4 --gss 1 36201 100 0.001 0.15 > ahmms_outputs/ahmms_${index}

@@ -3,7 +3,7 @@ make
 cp ahmm_mls ../../ahmm_mls_binary
 cd ../../SELAM/src
 make
-cp SELAM ../../3r_simulation/
+cp SELAM ../../run_simulation/
 cd ../../Ancestry_HMM-S/src/
 make
-cp ahmm-s ../../3r_simulation/
+cp ahmm-s ../../run_simulation/
