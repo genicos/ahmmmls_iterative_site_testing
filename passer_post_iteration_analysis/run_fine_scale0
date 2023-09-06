@@ -1,0 +1,1 @@
+nice -n 19 ../ahmm_mls_binary -i ../chrom_and_demo/panel -s ../chrom_and_demo/sample -m fine_config0 -R 0.15 -c 40 -vo -g -t2 0.1 > OUT_fine0
