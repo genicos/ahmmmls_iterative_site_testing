@@ -9,7 +9,7 @@ git clone --recurse-submodules git@github.com:genicos/ahmmmls_iterative_site_tes
 ### To make binaries from the submodules
 Run the command ./make_and_move
 
-### To run the iterative site testing on chromosome 3R
+### To run the iterative site testing
 Run the command ./start_iteration
 
 ## Overview of submodules
@@ -61,7 +61,7 @@ Creates the files best_model and best_lnl and best_model_file, which keep track 
 Performs a single iteration, where a single site is tested in the context of previously accepted sites.
 
 ### make_model_files.py
-Makes new model files for simulations and 3R analysis. 
+Makes new model files for simulations and analysis. 
 
 ### eval_alt_model.py
 Compares two likelihood ratios with a 95% cutoff ratio.
