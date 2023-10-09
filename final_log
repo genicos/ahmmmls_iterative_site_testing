@@ -1,0 +1,232 @@
+1.95207173
+1.97536437
+1.40827105
+0.75448193
+2.31888953
+2.34010835
+0.93734995
+0.31788427
+2.27851097
+1.63181551
+0.65524525
+0.42176415
+Testing site0
+
+Running null simulations
+completed
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ 
+completed
+Results:
+Threshold25.320473801344633
+best lnl-31860992.2745212
+alt  lnl-31860911.4925554
+Accepted
+Best model so far
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ 
+site: 1.95207173 with relative fitness: 1,0.993387541708079,0.986775083416157
+lnl:	-31860911.4925554
+
+Testing site1
+
+Running null simulations
+completed
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.97536437 h 0.5 s ()+ 
+completed
+Results:
+Threshold27.612110000103712
+best lnl-31860911.4925554
+alt  lnl-31860905.8803169
+Rejected
+Best model so far
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ 
+site: 1.95207173 with relative fitness: 1,0.993387541708079,0.986775083416157
+lnl:	-31860911.4925554
+
+Testing site2
+
+Running null simulations
+completed
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ 
+completed
+Results:
+Threshold24.249592700973153
+best lnl-31860911.4925554
+alt  lnl-31860871.6651635
+Accepted
+Best model so far
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ 
+site: 1.95207173 with relative fitness: 1,0.993373977769363,0.986747955538727
+site: 1.40827105 with relative fitness: 1,0.995629561137607,0.991259122275215
+lnl:	-31860871.6651635
+
+Testing site3
+
+Running null simulations
+completed
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ 
+completed
+Results:
+Threshold27.598182000219822
+best lnl-31860871.6651635
+alt  lnl-31860841.5893647
+Accepted
+Best model so far
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ 
+site: 1.95207173 with relative fitness: 1,0.993250446528026,0.986500893056052
+site: 1.40827105 with relative fitness: 1,0.995522282681357,0.991044565362714
+site: 0.75448193 with relative fitness: 1,0.995953968449523,0.991907936899047
+lnl:	-31860841.5893647
+
+Testing site4
+
+Running null simulations
+completed
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ 
+completed
+Results:
+Threshold26.603914599865675
+best lnl-31860841.5893647
+alt  lnl-31860800.904414
+Accepted
+Best model so far
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ 
+site: 1.95207173 with relative fitness: 1,0.993414906530968,0.986829813061936
+site: 1.40827105 with relative fitness: 1,0.995607228139951,0.991214456279902
+site: 0.75448193 with relative fitness: 1,0.995876800426749,0.991753600853498
+site: 2.31888953 with relative fitness: 1,0.995582752741153,0.991165505482307
+lnl:	-31860800.904414
+
+Testing site5
+
+Running null simulations
+completed
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ l 2.34010835 h 0.5 s ()+ 
+completed
+Results:
+Threshold28.796864800155163
+best lnl-31860800.904414
+alt  lnl-31860796.6931099
+Rejected
+Best model so far
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ 
+site: 1.95207173 with relative fitness: 1,0.993414906530968,0.986829813061936
+site: 1.40827105 with relative fitness: 1,0.995607228139951,0.991214456279902
+site: 0.75448193 with relative fitness: 1,0.995876800426749,0.991753600853498
+site: 2.31888953 with relative fitness: 1,0.995582752741153,0.991165505482307
+lnl:	-31860800.904414
+
+Testing site6
+
+Running null simulations
+completed
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ l 0.93734995 h 0.5 s ()+ 
+completed
+Results:
+Threshold26.597887199372053
+best lnl-31860800.904414
+alt  lnl-31860782.866149
+Rejected
+Best model so far
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ 
+site: 1.95207173 with relative fitness: 1,0.993414906530968,0.986829813061936
+site: 1.40827105 with relative fitness: 1,0.995607228139951,0.991214456279902
+site: 0.75448193 with relative fitness: 1,0.995876800426749,0.991753600853498
+site: 2.31888953 with relative fitness: 1,0.995582752741153,0.991165505482307
+lnl:	-31860800.904414
+
+Testing site7
+
+Running null simulations
+completed
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ l 0.31788427 h 0.5 s ()+ 
+completed
+Results:
+Threshold29.647233799099922
+best lnl-31860800.904414
+alt  lnl-31860772.7550261
+Rejected
+Best model so far
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ 
+site: 1.95207173 with relative fitness: 1,0.993414906530968,0.986829813061936
+site: 1.40827105 with relative fitness: 1,0.995607228139951,0.991214456279902
+site: 0.75448193 with relative fitness: 1,0.995876800426749,0.991753600853498
+site: 2.31888953 with relative fitness: 1,0.995582752741153,0.991165505482307
+lnl:	-31860800.904414
+
+Testing site8
+
+Running null simulations
+completed
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ l 2.27851097 h 0.5 s ()+ 
+completed
+Results:
+Threshold27.42389559932053
+best lnl-31860800.904414
+alt  lnl-31860790.8892444
+Rejected
+Best model so far
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ 
+site: 1.95207173 with relative fitness: 1,0.993414906530968,0.986829813061936
+site: 1.40827105 with relative fitness: 1,0.995607228139951,0.991214456279902
+site: 0.75448193 with relative fitness: 1,0.995876800426749,0.991753600853498
+site: 2.31888953 with relative fitness: 1,0.995582752741153,0.991165505482307
+lnl:	-31860800.904414
+
+Testing site9
+
+Running null simulations
+completed
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ l 1.63181551 h 0.5 s ()+ 
+completed
+Results:
+Threshold26.33627319894731
+best lnl-31860800.904414
+alt  lnl-31860775.5719868
+Rejected
+Best model so far
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ 
+site: 1.95207173 with relative fitness: 1,0.993414906530968,0.986829813061936
+site: 1.40827105 with relative fitness: 1,0.995607228139951,0.991214456279902
+site: 0.75448193 with relative fitness: 1,0.995876800426749,0.991753600853498
+site: 2.31888953 with relative fitness: 1,0.995582752741153,0.991165505482307
+lnl:	-31860800.904414
+
+Testing site10
+
+Running null simulations
+completed
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ l 0.65524525 h 0.5 s ()+ 
+completed
+Results:
+Threshold28.71871940046549
+best lnl-31860800.904414
+alt  lnl-31860781.2781923
+Rejected
+Best model so far
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ 
+site: 1.95207173 with relative fitness: 1,0.993414906530968,0.986829813061936
+site: 1.40827105 with relative fitness: 1,0.995607228139951,0.991214456279902
+site: 0.75448193 with relative fitness: 1,0.995876800426749,0.991753600853498
+site: 2.31888953 with relative fitness: 1,0.995582752741153,0.991165505482307
+lnl:	-31860800.904414
+
+Testing site11
+
+Running null simulations
+completed
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ l 0.42176415 h 0.5 s ()+ 
+completed
+Results:
+Threshold22.437061900272965
+best lnl-31860800.904414
+alt  lnl-31860782.3334099
+Rejected
+Best model so far
+1 test n 0.322 438 l 1.95207173 h 0.5 s ()+ l 1.40827105 h 0.5 s ()+ l 0.75448193 h 0.5 s ()+ l 2.31888953 h 0.5 s ()+ 
+site: 1.95207173 with relative fitness: 1,0.993414906530968,0.986829813061936
+site: 1.40827105 with relative fitness: 1,0.995607228139951,0.991214456279902
+site: 0.75448193 with relative fitness: 1,0.995876800426749,0.991753600853498
+site: 2.31888953 with relative fitness: 1,0.995582752741153,0.991165505482307
+lnl:	-31860800.904414
+
+Testing site12

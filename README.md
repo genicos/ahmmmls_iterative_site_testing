@@ -15,7 +15,7 @@ Run the command ./start_iteration
 ## Overview of submodules
 
 ### ahmm_mls
-This is the source code to build Ancestry-HMM Multi Locus Selection, which we use to fit the multi locus models on 3R and on the simulated populations.
+This is the source code to build Ancestry-HMM Multi Locus Selection, which we use to fit the multi locus models on italiae and on the simulated populations.
 
 ### SELAM
 This is the source code to build SELAM, which we use to simulate the admixed populations with selection.
@@ -27,22 +27,22 @@ This is the source code to build Ancestry-HMM Selection, which we use to find th
 ## Overview of directories
 
 ### /chrom_and_demo
-Here is the information specific to the chromosome arm 3R in the drosophila population we are studying.
+Here is the information specific to the admixed population we are studying.
 
 in chrom_and_demo/demographics, the first line is admixture fraction, second line is time (in generations) since admixture.  
-chrom_and_demo/panel is the aggregate of reads from this population on chromosome arm 3R, the input file.  
-chrom_and_demo/sample is the ploidy of the samples from the population, the sample file.  
+chrom_and_demo/panel is the aggregate of genotypes from this population of P. italiae, the input file.
+chrom_and_demo/sample is the ploidy of the samples from the population, the sample file.
 in chrom_and_demo/sites_to_test, each line is a candidate selected position, expressed in morgans.  
 
-### /3r_simulation
+### /run_simulation
 This directory is where we simulate the null models
 
 /run_simulations creates 20 simulated panels, and runs ahmmmls on them, fitting both an alternative and null model.
 
-### /3r_real
+### /run_real
 This directory is where we apply the models to the sampled data
 
-### /3r_post_iteration_analysis
+### /passer_post_iteration_analysis
 After the iteration process picks a set of sites, we fine tune their location and selection coefficients. 
 
 

@@ -6,7 +6,7 @@ t = str(int(demo[1]))
 
 #Initialize best log likelihood
 best_lnl = open("best_lnl","w")
-best_lnl.write("-999999999999")
+best_lnl.write("-31860992.2745212")
 
 #create empty best model file
 best_model = open("best_model", "w")

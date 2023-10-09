@@ -27,20 +27,17 @@ Model files used by Ahmm-mls, each simulated panel will have different lnl peaks
 ### 95thresh.py
 Finds 95% cutoff of log likelihood from null model simulations, to establish threshold for significance.
 
-### bp_morgan_unscaled
-Base pair coordinate to morgan coordinate conversion for drosophila.0.4.txt samples.
+### bp_morgan
+Base pair coordinate to morgan coordinate conversion for simualted samples.
 
 ### config_generator.py
 Uses Ahmm-s outputs to generated model files and place them into config_files/
 
-### drosophila.0.4.txt
-Results of a simulation of read counts extracted from a neutral admixed population of drosophila melanogaster along a single chromosome. 
+### passer_1_template
+Results of a simulation of genotypes extracted from the parental populations of Passer Italiae 
 
 ### gen_panel
 Generates the panel files by simulating the admixed population with selection and simulating the sampling of reads from those populations.
-
-### get_chrom_size.py
-Gets size of chromosome 3R in morgans
 
 ### run_ahmmmls
 Runs Ahmm-mls on panel files.
@@ -54,14 +51,11 @@ Begins all 20 simulations of null model populations and fits null and alternativ
 ### sample
 Sample file for Ahmm-s and Ahmm-mls.
 
-### scale_drosophila.py
-Scales recombinant distance between sampled sites in drosophila.0.4.txt and creates drosophila_scaled, which has the same morgan length as chromosome 3R.
-
 ### selection_generator.py
 Creates selection file, demography file, and output files for SELAM.
 
-### simulate_reads.pl
-Simulates the extraction of reads from the simulated population, creating a panel file.
+### make_panel.py
+Simulates the extraction of genotypes from the simulated population, creating a panel file.
 
 ### SELAM (generated file)
 Binary executable for SELAM, used to simulate admixed populations with selection.
@@ -69,14 +63,8 @@ Binary executable for SELAM, used to simulate admixed populations with selection
 ### ahmm-s (generated file)
 Binary executable for Ahmm-s, used to find peaks of lnl on simulated panels.
 
-### bp_morgan_scaled (generated file)
-Base pair coordinate to morgan coordinate conversion for drosophila_scaled samples.
-
 ### demography (generated file)
 Demography file for SELAM, determines admixture proportion and population sizes. 
-
-### drosophila_scaled (generated file)
-Copy of drosophila.0.4.txt with recombinant distances scaled so that the morgan length of the chromosome matches that of 3R.
 
 ### selection (generated file)
 Selection file for selam, matches selection model of current best fit model.

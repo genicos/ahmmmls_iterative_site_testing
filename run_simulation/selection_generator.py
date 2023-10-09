@@ -44,7 +44,7 @@ selection.close()
 
 
 # generate output files
-output_string = str(floor(time))+"\t0\t88\t0\tselam_outputs/selam_output"
+output_string = str(floor(time))+"\t0\t31\t0\tselam_outputs/selam_output"
 for i in range(20):
     output = open("output_files/output"+str(i), "w")
 

@@ -1,5 +1,5 @@
 In this directory are the scripts and commands used to perform the final fine tuning of
-our 3R multi-locus model, and to calculate the expected ancestries.
+our multi-locus model, and to calculate the expected ancestries.
 
    First we ran the command run_fine_scale0
 This refits the best model from the iterative procedure, but it allows the position of the sites
@@ -14,13 +14,8 @@ fine_config1 is the model file used for this search.
 OUT_fine1 is the output of this search.
 
    Finally we ran run_local_ancestry
-Here, we took the model found by run_fine_scale1 and split it into two halves of the chromosome.
-For each half, we calculated the expected local ancestry from the model, and from the samples.
-la_config_0 is the model file used for the first half of the chromosome.
-la_config_1 is the model file used for the second half of the chromosome.
-OUT_la_0 is the output for the first half of the chromosome.
-OUT_la_1 is the output for the second half of the chromosome.
-data_ancestry_peak_0.tsv is the average local ancestry across all samples for the model on the first half of the chromosome.
-data_ancestry_peak_1.tsv is the average local ancestry across all samples for the model on the second half of the chromosome.
-model_ancestry_peak_0.tsv is the expected local ancestry for the model on the first half of the chromosome.
-model_ancestry_peak_1.tsv is the expected local ancestry for the model on the second half of the chromosome.
+We calculated the expected local ancestry from the model, and from the samples.
+la_config is the model file used.
+OUT_la is the output.
+data_ancestry_model_9_25.tsv is the average local ancestry across all samples.
+model_ancestry_model_9_25.tsv is the expected local ancestry for the model.
