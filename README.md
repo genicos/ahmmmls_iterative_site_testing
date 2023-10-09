@@ -1,6 +1,7 @@
 # ahmmmls_iterative_site_testing
 
-
+Analysis done for D. melanogastor can be found on the main branch
+Analysis done for P. italiae can be found on the passer branch
 
 ### To pull code and all submodules
 git clone --recurse-submodules git@github.com:genicos/ahmmmls_iterative_site_testing.git
